@@ -5,7 +5,7 @@
 
 
 bool isEmpty(Node *node) {
-  if(!node->left && !node->right)
+  if(!node)
     return true;
   return false;
 }
@@ -37,11 +37,6 @@ void insertData(Node *root, Data data) {
 
 void printNode(Node *root);
 
-int *getAllKeys(Node *root, tipoP v) {
-  int coiso[20] = {0};
-
-  return coiso;
-}
 
 
 
