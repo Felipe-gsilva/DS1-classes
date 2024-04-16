@@ -18,7 +18,6 @@ int main(int argc, char *argv[])
   Node *nodão = biggestNode(root);
   printf("%d nodão", nodão->data.id);
 
-
   int contador = nNodes(root);
   printf("%d nodes", contador);
 
@@ -55,11 +54,13 @@ Node *createTree() {
 void fillNode(data data, Node *node) {
   node->data = data;
 }
+
 void insertRight(Node *node, int id) {
   if(vazia(node))
     return;
   if(node->right != NULL) 
     return;
+
   Node *newNode = generateNullNode();
   data data;
   data.id = id;
@@ -138,9 +139,8 @@ Node *biggestNode(Node *node) {
 }
 
 int nNodes(Node *node) {
-  if (!vazia(node)) {
+  if (!vazia(node)) 
     return nNodes(node->left) + nNodes(node->right) + 1;
-  }
   return 0;
 }
 
